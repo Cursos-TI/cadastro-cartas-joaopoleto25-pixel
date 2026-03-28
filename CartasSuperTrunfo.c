@@ -47,6 +47,8 @@ int main() {
   scanf(" %d", &pontos1);
 
   printf("\n");
+  
+  // --- Cadastro da carta (CARTAS 2)
 
   printf("Cadastro da carta 2 \n");
 
@@ -70,11 +72,21 @@ int main() {
 
   printf("Número de Pontos Turísticos: ");
   scanf(" %d", &pontos2);
-  // Área para definição das variáveis para armazenar as propriedades das cidades
+ 
+  // Área para exibição dos dados da cidade carta 1
+  printf ("\n================\n");
+  printf("carta 1:\n");
+  printf("Estado: %c\nCodigo: %s\nNome da Cidade: %s\n", estado1, codigo1,cidade1);
+  printf("Populacao: %d\nArea: %.2f km2\nPIB: %.2f bilhoes/n", populacao1, area1, pib1);
+  printf("Pontos Turisticos: %d\n", pontos1);
 
-  // Área para entrada de dados
+    // Área para exibição dos dados da cidade carta 2
 
-  // Área para exibição dos dados da cidade
+  printf ("\n================\n");
+  printf("carta 2:\n");
+  printf("Estado: %c\nCodigo: %s\nNome da Cidade: %s\n", estado2, codigo2,cidade2);
+  printf("Populacao: %d\nArea: %.2f km2\nPIB: %.2f bilhoes/n", populacao2, area2, pib2);
+  printf("Pontos Turisticos: %d\n", pontos2);
 
 return 0;
 } 
