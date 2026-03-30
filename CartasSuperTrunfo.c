@@ -9,7 +9,7 @@ int main() {
   int populacao1;
   float area1;
   float pib1;
-  int pontos1;
+  int pontosTuristicos1;
 
       // --- definição das variaveis (CARTAS 2)
 
@@ -19,11 +19,11 @@ int main() {
   int populacao2;
   float area2;
   float pib2;
-  int pontos2;
+  int pontosTuristicos2;
 
       // --- Cadastro da carta (CARTAS 1)
 
-  printf("Cadastro da carta 1 ");
+  printf("Cadastro da carta 1 \n");
 
   printf("Estado A: ");
   scanf(" %c", &estado1);
@@ -44,7 +44,7 @@ int main() {
   scanf(" %f", &pib1);
 
   printf("Número de Pontos Turísticos: ");
-  scanf(" %d", &pontos1);
+  scanf(" %d", &pontosTuristicos1);
 
   printf("\n");
   
@@ -56,7 +56,7 @@ int main() {
   scanf(" %c", &estado2);
 
   printf("codigo B02: ");
-  scanf(" %s", codigo2);
+  scanf(" %s", &codigo2);
 
   printf("Nome da cidade: ");
   scanf(" %[^\n]", cidade2);
@@ -71,22 +71,27 @@ int main() {
   scanf(" %f", &pib2);
 
   printf("Número de Pontos Turísticos: ");
-  scanf(" %d", &pontos2);
+  scanf(" %d", &pontosTuristicos2);
  
-  // Área para exibição dos dados da cidade carta 1
-  printf ("\n================\n");
-  printf("carta 1:\n");
-  printf("Estado: %c\nCodigo: %s\nNome da Cidade: %s\n", estado1, codigo1,cidade1);
-  printf("Populacao: %d\nArea: %.2f km2\nPIB: %.2f bilhoes/n", populacao1, area1, pib1);
-  printf("Pontos Turisticos: %d\n", pontos1);
+  // Exibição - Carta 1
+    printf("\n=== Carta 1 ===\n");
+    printf("Estado: %c\n", estado1);
+    printf("Codigo: %s\n", codigo1);
+    printf("Nome da Cidade: %s\n", cidade1);
+    printf("Populacao: %d\n", populacao1);
+    printf("Area: %.2f km2\n", area1);
+    printf("PIB: %.2f reais\n", pib1);
+    printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
 
-    // Área para exibição dos dados da cidade carta 2
-
-  printf ("\n================\n");
-  printf("carta 2:\n");
-  printf("Estado: %c\nCodigo: %s\nNome da Cidade: %s\n", estado2, codigo2,cidade2);
-  printf("Populacao: %d\nArea: %.2f km2\nPIB: %.2f bilhoes/n", populacao2, area2, pib2);
-  printf("Pontos Turisticos: %d\n", pontos2);
+    // Exibição - Carta 2
+    printf("\n=== Carta 2 ===\n");
+    printf("Estado: %c\n", estado2);
+    printf("Codigo: %s\n", codigo2);
+    printf("Nome da Cidade: %s\n", cidade2);
+    printf("Populacao: %d\n", populacao2);
+    printf("Area: %.2f km2\n", area2);
+    printf("PIB: %.2f reais\n", pib2);
+    printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
 
 return 0;
 } 
