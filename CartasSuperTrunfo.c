@@ -10,8 +10,13 @@ int main() {
   float area1;
   float pib1;
   int pontosTuristicos1;
+  float pibPerCapita1;
+  float densidade1;
+
+
 
       // --- definição das variaveis (CARTAS 2)
+
 
   char estado2;
   char codigo2[4];
@@ -20,6 +25,8 @@ int main() {
   float area2;
   float pib2;
   int pontosTuristicos2;
+  float pibPerCapita2;
+  float densidade2;
 
       // --- Cadastro da carta (CARTAS 1)
 
@@ -45,6 +52,9 @@ int main() {
 
   printf("Número de Pontos Turísticos: ");
   scanf(" %d", &pontosTuristicos1);
+
+  densidade1 = (float)populacao1 / area1;
+  pibPerCapita1 = pib1 / (float)populacao1;
 
   printf("\n");
   
@@ -72,6 +82,9 @@ int main() {
 
   printf("Número de Pontos Turísticos: ");
   scanf(" %d", &pontosTuristicos2);
+
+    densidade2 = (float)populacao2 / area2;
+    pibPerCapita2 = pib2 / (float)populacao2;
  
   // Exibição - Carta 1
     printf("\n=== Carta 1 ===\n");
@@ -82,6 +95,9 @@ int main() {
     printf("Area: %.2f km2\n", area1);
     printf("PIB: %.2f reais\n", pib1);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per capita: %.2f Reais \n", pibPerCapita1);
+  
 
     // Exibição - Carta 2
     printf("\n=== Carta 2 ===\n");
@@ -92,30 +108,12 @@ int main() {
     printf("Area: %.2f km2\n", area2);
     printf("PIB: %.2f reais\n", pib2);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
-
-    // Variável para armazenar o resultado da Carta 1 //
-
-    float densidade1, densidade2;
-    densidade1 = (float) populacao1 / area1;
-    densidade2 = (float) populacao2 / area2;
-
-printf("\n=== Densidade Populacional CARTA 1 ===\n"); 
-printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
-
-printf("\n=== Densidade Populacional CARTA 2 ===\n"); 
-printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
-
-float pibPerCapita1, pibPerCapita2;
-    pibPerCapita1 = (float) populacao1 / pibPerCapita1;
-    pibPerCapita2 = (float) populacao2 / pibPerCapita2;
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per capita: %.2f Reais \n", pibPerCapita2);
+   
 
 
 
-printf("\n=== PIB per capita CARTA 1 ===\n");    
-printf("PIB per capita: %.2f Bilhões de Reais \n", densidade1);
-
-printf("\n=== PIB per capita CARTA 2 ===\n"); 
-printf("PIB per capita: %.2f Bilhões de Reais \n", densidade2);
 
 return 0;
 } 
