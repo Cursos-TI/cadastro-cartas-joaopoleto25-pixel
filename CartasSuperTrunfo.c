@@ -12,6 +12,8 @@ int main() {
   int pontosTuristicos1;
   float pibPerCapita1;
   float densidade1;
+  float pibCapita1;
+  float superPoder1;
 
 
 
@@ -27,6 +29,8 @@ int main() {
   int pontosTuristicos2;
   float pibPerCapita2;
   float densidade2;
+  float pibCapita2;
+  float superPoder2;
 
       // --- Cadastro da carta (CARTAS 1)
 
@@ -112,8 +116,36 @@ int main() {
     printf("PIB per capita: %.2f Reais \n", pibPerCapita2);
    
 
+// Cálculos da Carta 1
+    densidade1 = (float)populacao1 / area1;
+    pibCapita1 = pib1 / (float)populacao1;
+    
+    // Cálculo do Super Poder:// 
 
+    superPoder1 = (float)populacao1 + area1 + pib1 + (float)pontosTuristicos1 + pibCapita1 + (1.0f / densidade1);
 
+    // --- Cadastro da Carta 2 --- (Repetir processo)
+    
+    superPoder1 = (float)populacao1 + area1 + pib1 + (float)pontosTuristicos1 + pibCapita1 + (1.0f / densidade1);
+
+    // Cálculos da Carta 2
+    densidade2 = (float)populacao2 / area2;
+    pibCapita2 = pib2 / (float)populacao2;
+    superPoder2 = (float)populacao2 + area2 + pib2 + (float)pontosTuristicos2 + pibCapita2 + (1.0f / densidade2);
+// --- Comparação de Cartas ---
+    printf("\nComparação de Cartas:\n");
+
+    // Lógica: (Atributo1 > Atributo2) resulta em 1 (Verdadeiro) ou 0 (Falso)
+    printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao2);
+    printf("Área: Carta 1 venceu (%d)\n", area1 > area2);
+    printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2);
+    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", pontosTuristicos1 > pontosTuristicos2);
+    
+    // ATENÇÃO: Na Densidade Populacional, o MENOR valor vence!
+    printf("Densidade Populacional: Carta 1 venceu (%d)\n", densidade1 < densidade2);
+    
+    printf("PIB per Capita: Carta 1 venceu (%d)\n", pibCapita1 > pibCapita2);
+    printf("Super Poder: Carta 1 venceu (%d)\n", superPoder1 > superPoder2);
 
 return 0;
 } 
